@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="main.css">
+        <title>電卓</title>
+    </head>
+ 
+    <body>
+        <div class="container">
+            <h3 id="result">0</h3>
+            <div class="button_block">
+                <div class="buttons">
+                    <button type="button" onclick="push_number('7')">7</button>
+                    <button type="button" onclick="push_number('8')">8</button>
+                    <button type="button" onclick="push_number('9')">9</button>
+                    <button type="button" onclick="push_operater('+')">+</button>
+                </div>
+                <div class="buttons">
+                    <button type="button" onclick="push_number('4')">4</button>
+                    <button type="button" onclick="push_number('5')">5</button>
+                    <button type="button" onclick="push_number('6')">6</button>
+                    <button type="button" onclick="push_operater('-')">-</button>
+                </div>
+                <div class="buttons">
+                    <button type="button" onclick="push_number('1')">1</button>
+                    <button type="button" onclick="push_number('2')">2</button>
+                    <button type="button" onclick="push_number('3')">3</button>
+                    <button type="button" onclick="push_operater('*')">*</button>
+                </div>
+                <div class="buttons">
+                    <button type="button" onclick="push_zero('0')">0</button>
+                    <button type="button" onclick="push_zero('00')">00</button>
+                    <button type="button" onclick="push_point('.')">.</button>
+                    <button type="button" onclick="push_operater('/')">/</button>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="big_button" onclick="push_clear()">AC</button>
+                    <button type="button" class="big_button" onclick="calc()">=</button>
+                </div>
+            </div>
+        </div>
+ 
+        <script src="main.js"></script>
+    </body>
+</html>
