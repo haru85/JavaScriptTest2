@@ -5,6 +5,7 @@ let operater_count = 0;
 let zero_input = false;
 let calc_input = false;
 let calc_result = 0;
+let point_input = true;
 let result = document.getElementById("result");
 
 function update_formula(letter) {
@@ -28,6 +29,7 @@ function push_operater(operater) {
         operater_count += 1;
         zero_input = false;
         calc_input = false;
+        point_input = true;
         update_formula(operater);
     }
 }
@@ -42,9 +44,15 @@ function push_zero(zero) {
 }
 
 function push_point() {
-    if (operater_input == true && operater_count ==0 ) {
+    if (point_input == true && formula == "") {
         operater_input = false;
         calc_input = false;
+        point_input = false;
+        update_formula("0.");
+    } else if (point_input) {
+        operater_input = false;
+        calc_input = false;
+        point_input = false;
         update_formula(".");
     }
 }
@@ -55,6 +63,7 @@ function push_clear() {
     operater_count = 0;
     zero_input = false;
     calc_input = false;
+    point_input = true;
     result.innerHTML = 0;
 }
 
